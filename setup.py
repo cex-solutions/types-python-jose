@@ -18,11 +18,11 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="changeme-types-package-name",
-    description="Type Stubs for changeme-package-name",
+    name="types-python-jose",
+    description="Type Stubs for python-jose",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/cex-solutions/changeme-package-name",
+    url="https://github.com/cex-solutions/python-jose",
     author="Binovate Labs",
     author_email="cex-dev@binovate.com",
     classifiers=[
@@ -37,20 +37,18 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     license="GPLv3",
-    keywords="stubs",
+    keywords="stubs python-jose jose",
     package_data={
-        "changeme-package-name-stubs": [
-            item.split("changeme-package-name-stubs/")[-1] for item in glob.glob("**/*.pyi", recursive=True)
-        ]
+        "jose-stubs": [item.split("jose-stubs/")[-1] for item in glob.glob("**/*.pyi", recursive=True)]
         + ["METADATA.toml"]
     },
-    packages=["changeme-package-name-stubs"],
+    packages=["jose-stubs"],
     python_requires=">=3.7, <4",
     install_requires=[],
-    extras_require={"dev": ["mypy==0.942", "pipenv-setup==3.2.0", "twine==4.0.0"]},
+    extras_require={"dev": ["python-jose==3.3.0", "mypy==0.942", "pipenv-setup==3.2.0", "twine==4.0.0"]},
     dependency_links=[],
     project_urls={
-        "Bug Reports": "https://github.com/cex-solutions/changeme-types-package-name/issues",
-        "Source": "https://github.com/cex-solutions/changeme-types-package-name",
+        "Bug Reports": "https://github.com/cex-solutions/types-python-jose/issues",
+        "Source": "https://github.com/cex-solutions/types-python-jose",
     },
 )
